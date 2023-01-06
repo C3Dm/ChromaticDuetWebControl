@@ -1,3 +1,7 @@
+# Chromatic Duet Web Control
+
+Duet Web Control with a few tweaks to suit the needs of C3DM.
+
 # Duet Web Control
 
 Duet Web Control is a fully-responsive HTML5-based web interface for RepRapFirmware which utilizes the Bootstrap framework, JQuery and a few other libraries to allow easy control of Duet-based 3D printer electronics.

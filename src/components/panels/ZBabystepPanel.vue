@@ -9,13 +9,13 @@
 
 			<v-row no-gutters class="mt-1">
 				<v-col>
-					<code-btn :code="`M290 R1 Z${-babystepAmount}`" no-wait block>
+					<code-btn :code="`M390 R1 Z${-babystepAmount}`" no-wait block>
 						<v-icon>mdi-arrow-collapse-vertical</v-icon> {{ $displayZ(-babystepAmount) }}
 					</code-btn>
 				</v-col>
 
 				<v-col>
-					<code-btn :code="`M290 R1 Z${babystepAmount}`" no-wait block>
+					<code-btn :code="`M390 R1 Z${babystepAmount}`" no-wait block>
 						<v-icon>mdi-arrow-split-horizontal</v-icon> +{{ $displayZ(babystepAmount) }}
 					</code-btn>
 				</v-col>

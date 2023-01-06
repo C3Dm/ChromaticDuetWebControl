@@ -3,7 +3,7 @@
 		<v-card-title class="pb-0">
 			<v-icon small class="mr-1">mdi-timer</v-icon> {{ $t('panel.speedFactor.caption') }}
 			<v-spacer></v-spacer>
-			<a v-show="speedFactor !== 100 && !uiFrozen" href="javascript:void(0)" @click.prevent="sendCode('M220 S100')" class="subtitle-2">
+			<a v-show="speedFactor !== 100 && !uiFrozen" href="javascript:void(0)" @click.prevent="sendCode('M320 S100')" class="subtitle-2">
 				<v-icon small class="mr-1">mdi-backup-restore</v-icon> {{ $t('generic.reset') }}
 			</a>
 		</v-card-title>
@@ -27,7 +27,7 @@ export default {
 		}),
 		speedFactor: {
 			get() { return (this.machineSpeedFactor !== null) ? (this.machineSpeedFactor * 100): 100; },
-			set(value) { this.sendCode(`M220 S${value}`); }
+			set(value) { this.sendCode(`M320 S${value}`); }
 		},
 		speedFactorMin() { return Math.max(1, Math.min(100, this.speedFactor - 50)); },
 		speedFactorMax() { return Math.max(150, this.speedFactor + 50); }

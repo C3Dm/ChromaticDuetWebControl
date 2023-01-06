@@ -63,7 +63,7 @@ export default {
 			return Math.round(extruder.factor * 100);
 		},
 		setExtrusionFactor(extruderIndex, value) {
-			this.sendCode(`M221 D${extruderIndex} S${value}`);
+			this.sendCode(`M321 D${extruderIndex} S${value}`);
 		}
 	}
 }
