@@ -44,6 +44,7 @@
 import { mapState, mapGetters } from 'vuex'
 
 import { MachineMode, StatusType, isPaused, isPrinting } from '@/store/machine/modelEnums'
+import Path from '@/utils/path.js'
 
 export default {
 	computed: {
@@ -81,7 +82,7 @@ export default {
 				if (this.lastFileSimulated) {
 					return `M37 P"${this.lastFileName}"`;
 				}
-				return `M32 "${this.lastFileName}"`;
+				return `M322 P"${this.lastFileName}" F"${Path.stripMacroFilename(Path.extractFileName(this.lastFileName))}"`;
 			}
 			return '';
 		},

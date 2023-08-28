@@ -331,7 +331,7 @@ export default {
 			}
 		},
 		start(item) {
-			this.sendCode(`M32 "${escapeFilename(Path.combine(this.directory, (item && item.name) ? item.name : this.selection[0].name))}"`);
+			this.sendCode(`M322 P"${escapeFilename(Path.combine(this.directory, (item && item.name) ? item.name : this.selection[0].name))}" F"${Path.stripMacroFilename(this.selection[0].name)}"`);
 		},
 		simulate(item) {
 			this.sendCode(`M37 P"${escapeFilename(Path.combine(this.directory, (item && item.name) ? item.name : this.selection[0].name))}"`);
